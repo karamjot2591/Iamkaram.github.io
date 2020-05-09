@@ -315,6 +315,7 @@ flex: 0 0 50%;
 max-width: 45%;
 margin-left: 40px;
 margin-top: 20px;
+
 }
 .timeline .row .experience 
 {
@@ -330,20 +331,23 @@ margin-left: 35px;
  font-size: 15px;
  margin-bottom: 20px;
  font-weight: 700;
- color:rgb(155, 155, 155);
+ /* color:rgb(155, 155, 155); */
 }
 
 .timeline .section-title .education .time-box{
 	-ms-flex: 0 0 100%;
 	flex: 0 0 100%;
 	max-width: 10 0%; 
+	box-shadow: 0 0 9px #b6bcda;
+	border-radius: 4px;
+	
 
 }
 .timeline .section-title .education .time{
 
-background-color:whitesmoke;
+background-color:white;
 padding: 30px 15px;
-border: 1px solid #d4d4e3;
+border: 1px solid #ffffff;
 border-radius: 8px;
 
 
@@ -359,13 +363,14 @@ border-radius: 8px;
 	-ms-flex: 0 0 100%;
 	flex: 0 0 100%;
 	max-width: 10 0%; 
-
+	box-shadow: 0 0 9px #b6bcda;
+	border-radius: 4px;
 }
 .timeline .section-title .experience .time{
 
-	background-color:whitesmoke;
+	background-color:white;
 	padding: 30px 15px;
-	border: 1px solid #d4d4e3;
+	border: 1px solid #ffffff;
 	border-radius: 8px;
 	
 	
@@ -407,7 +412,7 @@ font-size: 5px;
 .timeline .row .circle-dot{
 	content: '';	
 	border: 3px solid darkslategrey;
-	background:whitesmoke;
+	background:white;
 	left: 0;
 	position: absolute;
 	left: -8.7px;
@@ -416,6 +421,7 @@ font-size: 5px;
 	
 	width: 21px;
 	border-radius :50px;
+	
 }
 .timeline .row .circle-dot .active{
 	font-weight: 700;
@@ -613,11 +619,12 @@ font-size: 5px;
 /* Portfolio Works */
 
 .portfolio{
-    background-color: #f5f8fd;
+    background-color: #ffffff;
     padding: 100px 7px;
    }
    .portfolio .section-title h1{
-    color: darkslategrey;
+	color: darkslategrey;
+	
    }
    .portfolio .section-title h1:before{
        left:30%;
@@ -626,7 +633,8 @@ font-size: 5px;
    .portfolio .filter-buttons{
        
        flex:0 0 100%;
-       max-width: 100%;
+	   max-width: 100%;
+	   
    }
    .portfolio .filter-buttons ul{
        list-style: none;
@@ -635,13 +643,14 @@ font-size: 5px;
    }
    .portfolio .filter-buttons ul li{
        color:#000000;
-       font-weight: 500;
+       font-weight: 300;
        font-size:16px;
-       display: inline-block;
-       margin:0px 8px;
+       display: inline-flex;
+       margin:2px 5px;
        text-transform: uppercase;
        cursor: pointer;
-       padding-bottom:0px;
+	   padding-bottom:0px;
+	   
    }
    
    .portfolio .filter-buttons ul li.active {
@@ -665,7 +674,8 @@ font-size: 5px;
        flex:0 0 33.33%;
        max-width:33.33%;
        position: relative;
-       padding:8px;
+	   padding:8px;
+	  
    }
    .portfolio .portfolio-gallery .item .inner{
        position: relative;
@@ -1510,6 +1520,19 @@ footer .social a:hover{
     position: relative;
     padding: 8px;
 }
+.timeline.experience .row .time-box {
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    padding: 8px;
+}
+.timeline.education .row .time-box {
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    padding: 8px;
+}
+
 message-text .text {
     flex: 0 0 100%;
     max-width: 100%;
