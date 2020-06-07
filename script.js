@@ -14,6 +14,7 @@ var duration=500
       $('html ,body').animate({scrollTop : 0},90);
     });
   });
+  
  
   // gallery item filter
   const filterButtons=document.querySelector("#filter-btns").children;
@@ -76,94 +77,94 @@ var duration=500
 
 
   // testimonial slider 
-  const sliderContainer=document.querySelector(".testi-slider");
-  const slides=sliderContainer.children;
-  const containerWidth=sliderContainer.offsetWidth;
-  const margin=30;
-  let itemPerSlide=0;
-  let slideDots;
+//   const sliderContainer=document.querySelector(".testi-slider");
+//   const slides=sliderContainer.children;
+//   const containerWidth=sliderContainer.offsetWidth;
+//   const margin=30;
+//   let itemPerSlide=0;
+//   let slideDots;
   
-  // responsive
-  const responsive=[
-        {breakPoint:{width:0,item:1}},
-        {breakPoint:{width:991,item:2}} 
+//   // responsive
+//   const responsive=[
+//         {breakPoint:{width:0,item:1}},
+//         {breakPoint:{width:991,item:2}} 
        
-     ]        
+//      ]        
 
- function load(){
-    for(let i=0; i<responsive.length; i++){
-    	if(window.innerWidth>responsive[i].breakPoint.width){
-         itemPerSlide=responsive[i].breakPoint.item;  		
-    	}
+//  function load(){
+//     for(let i=0; i<responsive.length; i++){
+//     	if(window.innerWidth>responsive[i].breakPoint.width){
+//          itemPerSlide=responsive[i].breakPoint.item;  		
+//     	}
 
-    }
+//     }
 
-    start();
- }
+//     start();
+//  }
 
- function start(){
- 	     totalWidth=0;
-       for(let i=0; i<slides.length; i++){
-       	slides[i].style.width=(containerWidth/itemPerSlide)-margin + "px";
-       	slides[i].style.margin=margin/2 + "px";
-            totalWidth+=containerWidth/itemPerSlide;
-       }
+//  function start(){
+//  	     totalWidth=0;
+//        for(let i=0; i<slides.length; i++){
+//        	slides[i].style.width=(containerWidth/itemPerSlide)-margin + "px";
+//        	slides[i].style.margin=margin/2 + "px";
+//             totalWidth+=containerWidth/itemPerSlide;
+//        }
 
-       sliderContainer.style.width=totalWidth + "px";
+//        sliderContainer.style.width=totalWidth + "px";
 
-       slideDots=Math.ceil(slides.length/itemPerSlide);
-      //console.log(slideDots)
+//        slideDots=Math.ceil(slides.length/itemPerSlide);
+//       //console.log(slideDots)
 
-      for(let i=0; i<slideDots; i++){
-      	  const div=document.createElement("div");
-      	        div.id=i;
-      	        div.setAttribute("onclick","controlSlide(this)");
-      	        if(i==0){
-      	        	div.classList.add("active");
-      	        }
-      	document.querySelector(".slide-controls").appendChild(div);
-      }
- }
+//       for(let i=0; i<slideDots; i++){
+//       	  const div=document.createElement("div");
+//       	        div.id=i;
+//       	        div.setAttribute("onclick","controlSlide(this)");
+//       	        if(i==0){
+//       	        	div.classList.add("active");
+//       	        }
+//       	document.querySelector(".slide-controls").appendChild(div);
+//       }
+//  }
  
-  let currentSlide=0;
-  let    autoSlide=0;
+//   let currentSlide=0;
+//   let    autoSlide=0;
          
- function controlSlide(element){
- 	    clearInterval(timer)
- 	    timer=setInterval(autoPlay,5000);
-         autoSlide=element.id;
-        currentSlide=element.id;
-       changeSlide(currentSlide)
- }
+//  function controlSlide(element){
+//  	    clearInterval(timer)
+//  	    timer=setInterval(autoPlay,5000);
+//          autoSlide=element.id;
+//         currentSlide=element.id;
+//        changeSlide(currentSlide)
+//  }
 
- function changeSlide(currentSlide){
- 	 controlButtons=document.querySelector(".slide-controls").children;
+//  function changeSlide(currentSlide){
+//  	 controlButtons=document.querySelector(".slide-controls").children;
                    
- 	 for(let i=0; i<controlButtons.length; i++){
- 	 		controlButtons[i].classList.remove("active")
- 	 }
-        // console.log(currentSlide)
- 	 controlButtons[currentSlide].classList.add("active")
+//  	 for(let i=0; i<controlButtons.length; i++){
+//  	 		controlButtons[i].classList.remove("active")
+//  	 }
+//         // console.log(currentSlide)
+//  	 controlButtons[currentSlide].classList.add("active")
 
- 	 sliderContainer.style.marginLeft=-(containerWidth*currentSlide) + "px";
- }
+//  	 sliderContainer.style.marginLeft=-(containerWidth*currentSlide) + "px";
+//  }
 
-  function autoPlay(){
+//   function autoPlay(){
         
-      if(autoSlide==slideDots-1){
-      	autoSlide=0;
-      }
-      else{
-      	autoSlide++;
-      }
-      changeSlide(autoSlide)
-  }
+//       if(autoSlide==slideDots-1){
+//       	autoSlide=0;
+//       }
+//       else{
+//       	autoSlide++;
+//       }
+//       changeSlide(autoSlide)
+//   }
 
 
 
-  let timer=setInterval(autoPlay,5000);
+//   let timer=setInterval(autoPlay,5000);
 
- window.onload=load();
+//  window.onload=load();
 
  // header fixed
 

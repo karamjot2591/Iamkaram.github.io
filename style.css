@@ -1468,8 +1468,9 @@ footer .social a{
 	text-decoration: none;
 }
 footer .social a:hover{
-	color:#ffffff;
-}
+	color: darkslateblue;
+} 
+
 
 /*copyright*/
 .copyright{
