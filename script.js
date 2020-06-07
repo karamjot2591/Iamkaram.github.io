@@ -1,4 +1,20 @@
-
+$(document).ready(function(){
+    
+  
+var duration=500
+    $(window).scroll(function(){
+      if($(this).scrollTop() > 250){
+        $('#topBtn').fadeIn(duration);
+      } else{
+        $('#topBtn').fadeOut(duration);
+      }
+    });
+  
+    $("#topBtn").click(function(){
+      $('html ,body').animate({scrollTop : 0},90);
+    });
+  });
+ 
   // gallery item filter
   const filterButtons=document.querySelector("#filter-btns").children;
   const items=document.querySelector(".portfolio-gallery").children;
