@@ -14,6 +14,11 @@ var duration=500
       $('html ,body').animate({scrollTop : 0},90);
     });
   });
+
+  $(document).bind("contextmenu",function(e) {  
+    e.preventDefault(); 
+   
+  }); 
   // text animation
   var TxtRotate = function(el, toRotate, period) {
     this.toRotate = toRotate;
