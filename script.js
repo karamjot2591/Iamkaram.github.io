@@ -14,11 +14,19 @@ var duration=500
       $('html ,body').animate({scrollTop : 0},90);
     });
   });
-
+// right click inspect disbale here.....
   $(document).bind("contextmenu",function(e) {  
     e.preventDefault(); 
    
-  }); 
+  });
+  
+// f12 key disable heree
+$(document).keydown(function(e){
+  if(e.which === 123){
+     return false;
+  }
+});
+
   // text animation
   var TxtRotate = function(el, toRotate, period) {
     this.toRotate = toRotate;
